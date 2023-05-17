@@ -1,12 +1,12 @@
 package br.edu.ifpb.dac.falacampus.business.service.impl.Unit;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
 
 import br.edu.ifpb.dac.falacampus.business.service.impl.PasswordEnconderServiceImpl;
+import br.edu.ifpb.dac.falacampus.model.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import br.edu.ifpb.dac.falacampus.model.entity.User;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class PasswordEnconderServiceUnitTest {
 
@@ -33,6 +33,5 @@ public class PasswordEnconderServiceUnitTest {
         passwordEncoder.encryptPassword(user);
         assertNull(user.getPassword());
     }
-
 }
 

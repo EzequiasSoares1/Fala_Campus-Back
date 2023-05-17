@@ -166,8 +166,8 @@ public class SuapServiceImpl implements SuapService {
 		return find(tokenAcess,  DEPARTAMENTS_URL + urlSon);
 		
 	}
-	
 
-	
-	
+	public void setConverterService(ConverterService converterService) {
+		this.converterService = converterService;
+	}
 }

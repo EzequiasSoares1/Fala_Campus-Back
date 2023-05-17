@@ -56,7 +56,4 @@ public class ConfigPagination {
 		ConfigPagination other = (ConfigPagination) obj;
 		return Objects.equals(itens, other.itens) && Objects.equals(pagination, other.pagination);
 	}
-	
-	
-
 }
