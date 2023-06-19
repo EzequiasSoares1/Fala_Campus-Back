@@ -22,6 +22,7 @@ public class CommentTest extends ConfigsTest {
 
     @BeforeAll
     void up(){
+        logarUser1();
         timeOut();
         driver.findElement(By.xpath("//*[@id=\"comments\"]")).click();
         timeOut();
@@ -174,8 +175,5 @@ public class CommentTest extends ConfigsTest {
     void exit(){
         scrollUp();
         timeOut();
-        home();
-        clickButton("//*[@id=\"goOut\"]");
     }
-
 }
