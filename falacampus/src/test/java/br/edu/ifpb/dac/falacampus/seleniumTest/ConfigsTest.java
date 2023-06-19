@@ -32,37 +32,32 @@ abstract class ConfigsTest {
         }
     }
 
-
     void deleteXpath(String element) {
         driver.findElement(By.xpath(element)).sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
-
     }
+
 
     void clickButton(String element) {
         driver.findElement(By.xpath(element)).click();
     }
 
-    void logarUser1() {
-        driver.findElement(By.xpath(
-                        "/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/div[1]/input"))
-                .sendKeys(DataSingle.getRegistration());
-        driver.findElement(By.xpath(
-                        "/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/div[2]/input"))
-                .sendKeys(DataSingle.getPassword());
-        timeOut();
-        clickButton("/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/button");
-    }
-
-    void logarUser2() {
-        driver.findElement(By.xpath(
-                        "/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/div[1]/input"))
-                .sendKeys(DataSingle.getRegistration2());
-        driver.findElement(By.xpath(
-                        "/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/div[2]/input"))
-                .sendKeys(DataSingle.getPassword2());
-        timeOut();
-        clickButton("/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/button");
-    }
+	void logarUser1(){
+		insert(	"/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/div[1]/input", DataSingle.getRegistration());
+		insert(	"/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/div[2]/input", DataSingle.getPassword());
+		timeOut();
+		clickButton("/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/button");
+	}
+  
+	void logarUser2(){
+		insert(	"/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/div[1]/input", DataSingle.getRegistration2());
+		insert(	"/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/div[2]/input", DataSingle.getPassword2());
+		timeOut();
+		clickButton("/html/body/div/div[1]/div/div/div/div/div/div/div/div/form/fieldset/button");
+	}
+   void insert(String xpath, String args){
+	   driver.findElement(By.xpath(xpath))
+			   .sendKeys(args);
+   }
 
     void insert(String xPath, String text) {
         driver.findElement(By.xpath(xPath))
