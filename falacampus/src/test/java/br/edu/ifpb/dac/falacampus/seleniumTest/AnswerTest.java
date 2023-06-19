@@ -136,13 +136,14 @@ public class AnswerTest extends ConfigsTest {
     @Test
     @Order(8)
     void findCommentAnswer() {
+        timeOut();
         deleteXpath("/html/body/div/div[1]/div/div[1]/div/div/form/fieldset/div[1]/input");
         timeOut();
 
         insert("/html/body/div/div[1]/div/div[1]/div/div/form/fieldset/div[1]/input", "213231");
         timeOut();
 
-        Select select = new Select(driver.findElement(By.xpath("//*[@id=\"root\"]/div[1]/div/div[1]/div/div/form/fieldset/div[2]/select")));
+        Select select = new Select(driver.findElement(By.xpath("/html/body/div/div[1]/div/div[1]/div/div/form/fieldset/div[2]/select")));
         select.selectByValue("comment");
         timeOut();
 
