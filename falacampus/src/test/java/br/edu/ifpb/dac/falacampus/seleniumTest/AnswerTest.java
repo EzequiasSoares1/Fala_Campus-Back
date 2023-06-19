@@ -136,7 +136,6 @@ public class AnswerTest extends ConfigsTest {
     @Test
     @Order(8)
     void findCommentAnswer() {
-        timeOut();
         deleteXpath("/html/body/div/div[1]/div/div[1]/div/div/form/fieldset/div[1]/input");
         timeOut();
 
