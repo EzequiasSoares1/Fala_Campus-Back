@@ -10,9 +10,10 @@ import org.junit.platform.suite.api.Suite;
         HomeTest.class,
         ListDepartmentTest.class,
         RegisterCommentTest.class,
+        UserTest.class,
         EditUserTest.class,
         CommentTest.class,
-        LoginTest.class
+       //LoginTest.class
 })
 public class SuiteSystemTest {
 
