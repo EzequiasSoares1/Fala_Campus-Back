@@ -2,37 +2,33 @@
 
 ## IFPB Campus Monteiro - DAC - 2022.1
 
-Sistema de sugestões, críticas e elogios Fala Campus, voltado para a comunidade acadêmica do Instituto Federal da Paraíba, Campus Monteiro - PB.
+Fala Campus is a system for suggestions, critiques, and compliments aimed at the academic community of the Federal Institute of Paraíba, Campus Monteiro - PB.
 
-Projeto apresentado na Disciplina de Desenvolvimento de Aplicações Corporativas, no 5° período do curso de Análise e Desenvolvimento de Sistemas, com o professor Elenilson Vieira.
+Project presented in the Corporate Applications Development Discipline, in the 5th semester of the Analysis and Systems Development course, with Professor Elenilson Vieira.
 
-## Dependências:
-Git;
+## Dependencies:
+- Git;
+- PostgreSQL
+- Maven
 
-PostgreSQL
+## Getting the source code:
 
-Maven .
+With Git installed on your computer, open a command line terminal (on Windows, use Git Bash).
 
-## Obtendo o código-fonte:
-
-
-Com o Git instalado em seu computador, abre um terminal de linha de comando (no Windows o Git Bash ).
-
-Cole o comando descrito abaixo:
+Paste the following command:
 
 git clone https://github.com/elenilsonvieira/falacampus-back.git
 
-## Configurando e executando:
+## Configuring and running:
 
-Na linha de comando, entre no diretório do projeto:
+In the command line, navigate to the project directory:
 
-cd /{caminho}/{até}/{repositório}/falacampus-back
+cd /{path}/{to}/{repository}/falacampus-back
 
-## Dependências da aplicação:
+## Application dependencies:
 
 mvn dependency:resolve
 
-## Para a execução da aplicação, digite:
+## To run the application, type:
 
 mvn spring-boot:run
-
